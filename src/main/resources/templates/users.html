@@ -19,14 +19,15 @@
   </div>
 
   <div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table">
       <thead class="table-dark">
       <tr>
         <th>ID</th>
         <th>E-mail</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th></th>
+        <th>Enabled</th>
+        <th>Options</th>
       </tr>
       </thead>
       <tbody>
@@ -36,9 +37,10 @@
           <td>[[${user.email}]]</td>
           <td>[[${user.firstName}]]</td>
           <td>[[${user.lastName}]]</td>
+          <td>[[${user.enabled}]]</td>
           <td>
-            <a class="h4 me-3" th:href="@{'/users/edit.' + ${user.id}}">Edit</a>
-            <a class="h4" th:href="@{'/users/delete.' + ${user.id}}">Delete</a>
+            <a class="h4 me-3" th:href="@{'/users/edit/' + ${user.id}}">Edit</a>
+            <a class="h4" th:href="@{'/users/delete/' + ${user.id}}">Delete</a>
           </td>
         </tr>
       </th:block>
