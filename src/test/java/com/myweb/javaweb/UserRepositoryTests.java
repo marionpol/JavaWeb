@@ -20,7 +20,7 @@ public class UserRepositoryTests {
     @Test
     public void testAddNewUser() {
         User user = new User();
-        user.setEmail("toomas@email.com");
+        user.setEmail("toomasdsaasdsas@email.com");
         user.setPassword("qwerty");
         user.setFirstName("Toomas");
         user.setLastName("Toom");
@@ -57,7 +57,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testGet() {
-        Integer userId = 2;
+        Integer userId = 30;
         Optional<User> optionalUser = repo.findById(userId);
         User user = optionalUser.get();
 
@@ -68,7 +68,7 @@ public class UserRepositoryTests {
     @Test
 
     public void testDelete() {
-        Integer userId = 2;
+        Integer userId = 30;
         repo.deleteById(userId);
         Optional<User> optionalUser = repo.findById(userId);
 
